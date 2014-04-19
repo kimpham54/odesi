@@ -1,0 +1,62 @@
+<!-- kim pham: jquery code I didn't make but used in conjunction with excelmacro-copynewlinessheet because it generated a lot of text.  help: jslint, learned that js was very finicky and jquery was best option to go with, stackoverflow -->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+
+// The height of the content block when it's not expanded
+var adjustheight = 80;
+// The "more" link text
+var moreText = "+  More";
+// The "less" link text
+var lessText = "- Less";
+
+// Sets the .more-block div to the specified height and hides any content that overflows
+$(".more-less .more-block").css('height', adjustheight).css('overflow', 'hidden');
+
+// The section added to the bottom of the "more-less" div
+//$(".more-less").append('<p class="continued">[&hellip;]</p><a href="#" class="adjust"></a>');
+$(".more-less").append('<a href="#" class="adjust"></a>');
+
+
+$("a.adjust").text(moreText);
+
+$(".adjust").toggle(function() {
+		$(this).parents("div:first").find(".more-block").css('height', 'auto').css('overflow', 'visible');
+		// Hide the [...] when expanded
+		$(this).parents("div:first").find("p.continued").css('display', 'none');
+		$(this).text(lessText);
+	}, function() {
+		$(this).parents("div:first").find(".more-block").css('height', adjustheight).css('overflow', 'hidden');
+		$(this).parents("div:first").find("p.continued").css('display', 'block');
+		$(this).text(moreText);
+});
+});
+
+</script>
+
+
+<table>
+
+  
+    <tr>
+    <td width="20%"><a href="http://odesidownload.scholarsportal.info.myaccess.library.utoronto.ca/documentation/DEMOG/APS/2012/data/Section%201_%20Métis_supporting%20data%20tables.xlsx">Lorem ipsum dolor sit amet</a></td>
+    <td width="80%">
+		
+	  <div class="more-less">
+    
+    	<div class="more-block">
+	
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum quam at turpis sollicitudin, eget fermentum ante vestibulum. Phasellus id nunc scelerisque, fringilla purus eu, convallis nisi. Suspendisse vestibulum purus dolor. Vivamus cursus lacinia posuere. Aliquam mattis scelerisque dui at aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed consectetur venenatis ullamcorper. Aenean sodales molestie nisi, id vulputate felis tempus sit amet. Nulla ut ultricies eros. Etiam in nulla placerat, commodo orci a, posuere mi. Donec consequat nunc at odio placerat dictum non bibendum neque. Mauris tincidunt ultricies velit, ac viverra nunc viverra nec. Ut ultrices sapien ac congue semper. Fusce non diam mauris.
+
+Etiam hendrerit congue nibh, non tincidunt mi tristique id. Curabitur egestas dolor vitae felis tristique pharetra. Aliquam cursus tortor vehicula, scelerisque nulla eu, commodo augue. Ut convallis accumsan elit vehicula congue. Nulla vehicula nisl in sapien iaculis fringilla. Morbi nisl ligula, placerat nec ultrices vitae, bibendum vitae massa. Etiam consectetur metus vitae vulputate sagittis. Pellentesque lorem ligula, pharetra non sapien porta, aliquet suscipit tortor. Nulla facilisi. Quisque tempus lorem id ante viverra, a pretium risus pellentesque. Quisque dignissim nisi lorem, a auctor justo malesuada luctus. Nulla ornare lorem lacinia mauris faucibus, tempus pharetra tortor sagittis.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget justo at felis viverra eleifend. Etiam placerat sapien ut nibh fermentum, ac accumsan enim vehicula. Curabitur pretium faucibus ultricies. Proin ligula nisi, dapibus eget lacinia in, consequat in neque. Nunc varius, nisl non iaculis interdum, massa turpis vestibulum leo, sed tempor ligula odio consectetur felis. Proin scelerisque sollicitudin leo, non lacinia orci volutpat pulvinar. Sed in leo tellus. Praesent a gravida magna. Maecenas imperdiet sagittis elit eget vehicula. Etiam interdum at lectus blandit elementum. Sed dictum, lacus a mattis laoreet, est sapien elementum felis, a consectetur dui turpis sit amet nibh. Suspendisse augue enim, bibendum consectetur ligula eget, posuere imperdiet neque. Nam elementum purus vel magna fermentum vehicula. Nam adipiscing, purus vel luctus elementum, nunc nisl condimentum urna, eu interdum arcu sem non ligula. Nunc fringilla suscipit placerat.
+
+Duis egestas iaculis dui. Phasellus vulputate nunc et convallis convallis. Proin ullamcorper mauris eu nisi porttitor aliquet. In mattis lorem eu euismod vulputate. Suspendisse lacinia odio pharetra sodales blandit. Fusce laoreet mollis tellus sed mattis. Pellentesque vel urna nunc. Vivamus sed eleifend nibh. Maecenas faucibus viverra aliquam. Maecenas fringilla fringilla tortor vitae tempor. Etiam eget sollicitudin nulla. Nam sit amet nulla eu est tempus bibendum in quis sapien. Duis eros mauris, rhoncus dignissim risus sed, volutpat euismod lacus.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla libero enim, accumsan tempus dui quis, semper posuere lacus. Nullam a ipsum massa. Nam eget hendrerit eros. Fusce ut lorem a orci malesuada porttitor. Mauris elementum nunc eleifend, imperdiet neque non, bibendum libero. Donec aliquam eros vitae odio laoreet, viverra faucibus orci scelerisque. Maecenas ornare risus eu hendrerit tristique. Sed vitae condimentum diam. Cras faucibus euismod purus, sit amet imperdiet justo ultrices ut. In consequat quam eu eros convallis eleifend. Morbi in magna ac elit ullamcorper dapibus. Quisque ac sem non erat pellentesque consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. </td>
+  </tr>
+  </table>
