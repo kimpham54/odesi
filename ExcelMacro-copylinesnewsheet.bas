@@ -3,9 +3,11 @@ Attribute VB_Name = "Module1"
 
 Sub copylinesnewsheet()
 
-'works in Windows Excel 2010
+'by Kim Pham, works in Windows Excel 2010
 'Ctrl+h shortcut
 'will copy first two lines of each sheet and paste in subsequent lines on Sheet1
+'used for http://odesidownload.scholarsportal.info.myaccess.library.utoronto.ca/documentation/DEMOG/APS/2012/aps.html
+'help: macro maker in excel, googled 'paste special macro excel' 
 
     Dim ws As Worksheet
 
